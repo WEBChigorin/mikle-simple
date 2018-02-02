@@ -1,0 +1,49 @@
+main {
+  @include box-shadow;
+  width: 100%;
+  max-width: 1300px;
+  @include flex-col-cent;
+}
+.projects {
+ padding: 2em;
+}
+
+.project {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.info {
+  padding-right: 2em;
+  @include flex-col-cent;
+  justify-content: flex-start;
+  color: darken(#ddd, 60);
+  border-right: 1px solid  darken(#ddd, 60);
+  span {
+    font-size: .8em;
+    margin-bottom: 1em;
+    font-family: $general;
+  }
+}
+
+.name {
+  width: 100%;
+  max-width: 600px;
+  margin-left: 2em;
+
+  a {
+    text-decoration: none;
+    color: darken(#ddd, 60);
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: .6em;
+    font-family: $general;
+  }
+  p {
+    font-family: $general;
+    font-size: .9em;
+    color: darken(#ddd, 45);
+    line-height: 1.5em;
+  }
+}
