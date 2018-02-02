@@ -4,7 +4,7 @@
 		return app.init();
 	});
 	app = {
-		text: "Simple Notes Of a Novice Developer.",
+		text: "Simple Notes Of a Novice WEB Developer.",
 		index: 0,
 		chars: 0,
 		speed: 100,

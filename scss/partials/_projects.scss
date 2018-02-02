@@ -11,6 +11,9 @@ main {
 .project {
   display: flex;
   margin-bottom: 2em;
+  @include mobile {
+    flex-flow: column-reverse;
+  };
 }
 
 .info {
@@ -18,7 +21,13 @@ main {
   @include flex-col-cent;
   justify-content: flex-start;
   color: darken(#ddd, 60);
-  border-right: 1px solid  darken(#ddd, 60);
+  border-right: 1px solid  darken(#ddd, 50);
+  @include mobile {
+    border: none;
+    align-self: center;
+    flex-direction: row;
+    border-bottom: 1px solid darken(#ddd, 50);
+  };
   span {
     font-size: .8em;
     margin-bottom: 1em;
@@ -30,6 +39,9 @@ main {
   width: 100%;
   max-width: 600px;
   margin-left: 2em;
+  @include mobile {
+    margin-left: 1em;
+  }
 
   a {
     text-decoration: none;

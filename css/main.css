@@ -540,10 +540,11 @@ nav {
     margin: 0 auto;
     height: 1px;
     width: 200px;
-    background: #000; }
+    background: #000;
+    margin-top: 2em; }
 
 .text-box-2 {
-  margin: 1em 1em; }
+  margin: 2em 1em; }
   .text-box-2 a {
     text-decoration: none;
     color: #000;
@@ -566,6 +567,9 @@ main {
 .project {
   display: flex;
   margin-bottom: 2em; }
+  @media (max-width: 500px) {
+    .project {
+      flex-flow: column-reverse; } }
 
 .info {
   padding-right: 2em;
@@ -575,7 +579,13 @@ main {
   justify-content: center;
   justify-content: flex-start;
   color: #444444;
-  border-right: 1px solid #444444; }
+  border-right: 1px solid #5e5e5e; }
+  @media (max-width: 500px) {
+    .info {
+      border: none;
+      align-self: center;
+      flex-direction: row;
+      border-bottom: 1px solid #5e5e5e; } }
   .info span {
     font-size: .8em;
     margin-bottom: 1em;
@@ -585,6 +595,9 @@ main {
   width: 100%;
   max-width: 600px;
   margin-left: 2em; }
+  @media (max-width: 500px) {
+    .name {
+      margin-left: 1em; } }
   .name a {
     text-decoration: none;
     color: #444444; }
