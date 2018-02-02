@@ -12,7 +12,6 @@ a {
 nav {
   display: flex;
   justify-content: center;
-  border: 1px solid silver;
   font-family: $general;
   font-weight: $fw-n;
   ul {
@@ -22,12 +21,27 @@ nav {
     width: 50%;
     display: flex;
     justify-content: space-between;
+
+    //Let's make a neat hover effect
+    li a {
+      text-shadow: none;
+      transition: text-shadow .4s;
+      &:hover {
+        @include text-shadow;
+      }
+    }
+    //--------MediaQuery---------//
+    @include mobile {
+      width: 100%;
+      font-size: .8em;
+      justify-content: space-around;
+    };
   }
 }
 
 .head-text {
   width: 100%;
-  margin-top: 25%;
+  margin-top: 20%;
   display: flex;
   flex-direction: column;
 
@@ -37,12 +51,26 @@ nav {
     font-size: 7.4vw;
     letter-spacing: .1em;
     @include text-shadow;
+
+    //--------MediaQuery---------//
+    @include mobile {
+      font-size: 11.5vw;
+      margin-top: 3em;
+    };
+    @include tablet {
+      margin-top: 1.2em;
+    }
   }
 
   p {
-    margin: 0 auto;
+    margin: .2em auto;
     font-family: $general;
     font-size: 1.5vw;
     letter-spacing: .1em;
+
+   //--------MediaQuery---------//
+    @include mobile {
+      font-size: 4vw;
+    };
   }
 }

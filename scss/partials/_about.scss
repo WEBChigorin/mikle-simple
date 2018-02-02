@@ -1,3 +1,45 @@
 .about-me {
   grid-row: 2;
+  width: 100%;
+  @include box-shadow;
+}
+
+.face {
+  width: 14vw;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  margin-top: 2em;
+    //--------MediaQuery---------//
+    @include mobile {
+      width: 40vw;
+    };
+}
+.img-box {
+  @include flex-col-cent;
+}
+.text-box-1 {
+  @include flex-col-cent;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  h2 {
+    margin-top: 0;
+    font-family: $general;
+  }
+  p {
+    @extend h2;
+    line-height: 1.4em;
+  }
+  &:after {
+    @include line(200px);
+  }
+}
+.text-box-2 {
+  margin: 1em 1em;
+  a {
+    text-decoration: none;
+    color: #000;
+    margin-left: .4em;
+    font-size: 1.5em;
+  }
 }

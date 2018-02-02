@@ -5,3 +5,44 @@
 @mixin text-shadow {
 text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
 }
+
+@mixin flex-col-cent {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Simple line after block elements
+
+@mixin line($width) {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  height: 1px;
+  width: $width;
+  background: #000;
+}
+
+// MediaQuery Mixins
+$mobile-width: 500px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
