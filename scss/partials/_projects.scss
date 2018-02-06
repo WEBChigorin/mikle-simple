@@ -25,13 +25,19 @@ main {
   @include mobile {
     border: none;
     align-self: center;
-    flex-direction: row;
+    flex-direction: column;
     border-bottom: 1px solid darken(#ddd, 50);
+    padding-right: 0;
   };
   span {
     font-size: .8em;
     margin-bottom: 1em;
     font-family: $general;
+  }
+  span.tools {
+    font-size: 2em;
+    margin-bottom: 0;
+    @include hover-color;
   }
 }
 
@@ -51,6 +57,7 @@ main {
     margin-top: 0;
     margin-bottom: .6em;
     font-family: $general;
+    @include hover-color;
   }
   p {
     font-family: $general;

@@ -445,6 +445,8 @@ nav {
     justify-content: space-between; }
     nav ul li a {
       text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff; }
+      nav ul li a:hover {
+        color: #b94343; }
     @media (max-width: 500px) {
       nav ul {
         width: 100%;
@@ -550,6 +552,8 @@ nav {
     color: #000;
     margin-left: .4em;
     font-size: 1.7em; }
+    .text-box-2 a:hover {
+      color: #b94343; }
 
 main {
   -webkit-box-shadow: 0px 5px 8px #d1c6b3;
@@ -584,12 +588,18 @@ main {
     .info {
       border: none;
       align-self: center;
-      flex-direction: row;
-      border-bottom: 1px solid #5e5e5e; } }
+      flex-direction: column;
+      border-bottom: 1px solid #5e5e5e;
+      padding-right: 0; } }
   .info span {
     font-size: .8em;
     margin-bottom: 1em;
     font-family: "Coming Soon", cursive; }
+  .info span.tools {
+    font-size: 2em;
+    margin-bottom: 0; }
+    .info span.tools:hover {
+      color: #b94343; }
 
 .name {
   width: 100%;
@@ -605,6 +615,8 @@ main {
     margin-top: 0;
     margin-bottom: .6em;
     font-family: "Coming Soon", cursive; }
+    .name h3:hover {
+      color: #b94343; }
   .name p {
     font-family: "Coming Soon", cursive;
     font-size: .9em;

@@ -25,6 +25,7 @@ nav {
 
     li a {
       @include text-shadow;
+      @include hover-color;
     }
     //--------MediaQuery---------//
     @include mobile {

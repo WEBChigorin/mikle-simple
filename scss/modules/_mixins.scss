@@ -2,8 +2,17 @@
   -webkit-box-shadow: 0px 5px 8px lighten(#c4b59d, 7%);
           box-shadow: 0px 5px 8px lighten(#c4b59d, 7%);
 }
+
+// Add some shadow to the piece of text
 @mixin text-shadow {
 text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+}
+
+// Add hover effect - change it's color 
+@mixin hover-color{
+  &:hover {
+    color: rgb(185, 67, 67);
+  }
 }
 
 @mixin flex-col-cent {
@@ -14,7 +23,6 @@ text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
 }
 
 // Simple gorizontal line after block elements
-
 @mixin line($width) {
   content: '';
   display: block;
@@ -34,6 +42,7 @@ text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
 }
 
 // MediaQuery Mixins
+
 $mobile-width: 500px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
